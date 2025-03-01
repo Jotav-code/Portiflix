@@ -123,7 +123,7 @@ body{
             }
             & button.criar{
                 background: rgba(132, 132, 132, 0.263);
-                padding: .5rem 36%;
+                padding: .5rem 36.3%;
                 color: #fff;
                 font-size: 2rem;
                 border-radius: .3rem;
@@ -185,4 +185,18 @@ body{
             }
         }
     }
+}
+@media(max-width:771px){
+    .section{
+        width: 350px;
+    }
+    html{
+        font-size: 50%;
+    }
+}
+@media(max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+
 }
