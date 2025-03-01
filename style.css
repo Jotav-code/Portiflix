@@ -1,0 +1,188 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'nunito', serif;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+}
+html{
+    font-size: 69.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem; /*Controla o scroll*/
+}
+
+html::-webkit-scrollbar-track{
+    /*cor de fundo da barra*/
+    background-color: black;
+}
+
+html::-webkit-scrollbar-thumb{
+    /*cor da barra*/
+    background-color: red
+}
+body{
+    background:  linear-gradient(130deg, rgba(0, 0, 0, 0.595), rgba(0, 0, 0, 0.485)),url(img/background\ netflix.jpg);
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    z-index: -1000;
+}
+.header{
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    justify-items: center;
+    align-items: center;
+
+    & h1{
+        color: red;
+        font-size: 3rem;
+    }
+
+    & nav{
+        & ul{
+            & li{
+                & a{
+                    color: #fff;
+                    background: red;
+                    padding: .6rem .9rem;
+                    border-radius: 0.3rem;
+                    font-size: 1.5rem;
+                    
+                }
+            }
+        }
+    }
+}   
+.section{
+    position: relative;
+    background: rgba(0, 0, 0, 0.768);
+    height: 550px;
+    width: 500px;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-30%);
+    left: 50%;
+    transform: translateX(-50%);
+    & .items{
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10%;
+        padding-right: 10%;
+        & h1{
+            color: #fff;
+            font-size: 4rem;
+            text-align: start;
+            padding-bottom: 20px;
+        }
+        & .inputs{
+            
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            & input{
+                padding: 1.8rem;
+                border-radius: .3rem;
+                background: rgba(30, 30, 30, 0.501) ;
+                color: #fff;
+                border: .1px solid rgba(212, 198, 198, 0.378);
+            }
+            & input::placeholder{
+                font-size: 17px;
+                color: #d0d0d0b5;
+            }
+        }
+        & button.entrar{
+            margin-top: 2rem;
+            background: red;
+            padding: .5rem 30%;
+            color: #fff;
+            font-size: 2rem;
+            border-radius: .3rem;
+            cursor: pointer;
+        }
+        & .item-1{
+            & h2{
+                font-size: 2.5rem;
+                color: #aaa;
+                font-weight: 100;
+                margin: 2rem
+            }
+            & button.criar{
+                background: rgba(132, 132, 132, 0.263);
+                padding: .5rem 36%;
+                color: #fff;
+                font-size: 2rem;
+                border-radius: .3rem;
+                cursor: pointer;
+            }
+        }
+        & .help{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            justify-items: center;
+            padding-top: 10px;
+
+            & .item-1{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & input{
+                    appearance: none;
+                    width: 19px;
+                    height: 19px;
+                    border: 1px solid #555;
+                    border-radius: 2px;
+                    background-color: black;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+                & input:checked{
+                    background: rgba(129, 124, 124, 0.761);
+                    
+                }
+                & input:checked::after{
+                    content: '✓';
+                    font-size: 8px;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: bold;
+                }
+
+                
+
+
+                & h3{
+                    color: #fff;
+                    font-weight: 100;
+                    margin-left: 7px;
+                    font-size: 19px;
+                }
+            }
+            & .item-2{
+                & a{
+                    font-weight: 100;
+                    color: #fff;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
